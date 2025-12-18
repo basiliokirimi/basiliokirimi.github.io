@@ -1,71 +1,117 @@
+/* Base Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #f9f9f9;
   color: #333;
+  background-color: #f9f9f9;
 }
 
-header {
-  background-color: #004080;
-  color: #fff;
-  padding: 30px 20px;
+h1, h2 {
+  color: #004080; /* Party primary color */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 60vh;
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 64, 128, 0.6); /* semi-transparent overlay with party color */
+  padding: 40px 20px;
   text-align: center;
+  color: #fff;
+  width: 100%;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-header p {
-  margin: 10px 0 0 0;
-  font-size: 1.2rem;
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #d90000; /* Accent color for buttons */
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a30000;
+}
+
+/* Party Section */
+.party-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.party {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.party img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Section Styles */
 section {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-h2 {
-  color: #004080;
-  margin-top: 40px;
-}
-
-.party {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.party img {
-  width: 50px;
-  height: 50px;
-}
-
 .slogan {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #d90000;
 }
 
+/* Footer */
 footer {
   background-color: #004080;
   color: #fff;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
 }
 
+/* Responsive */
 @media (max-width: 600px) {
-  header h1 {
+  .hero h1 {
     font-size: 2rem;
   }
+  .hero p {
+    font-size: 1rem;
+  }
   .party img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+  }
+  .btn {
+    padding: 8px 20px;
   }
 }
