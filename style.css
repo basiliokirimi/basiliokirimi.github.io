@@ -22,6 +22,27 @@ h1, h2 {
   justify-content: center;
 }
 
+/* Hero top - Party logo & name */
+.hero-party-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.hero-logo {
+  width: 60px;
+  height: 60px;
+}
+
+.hero-party-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffd700; /* optional gold for party name */
+}
+
+
 .hero-overlay {
   background-color: rgba(0, 64, 128, 0.6); /* semi-transparent overlay */
   padding: 40px 20px;
