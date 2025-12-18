@@ -13,59 +13,71 @@ h1, h2 {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero {
   position: relative;
-  height: 60vh;
+  height: 50vh; /* shorter hero to reduce clutter */
   background: url('hero-bg.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* left align content */
+  padding: 0 40px;
 }
 
-/* Hero top - Party logo & name */
-.hero-party-container {
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for text */
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+/* Hero Top Row: Broom + Party Name + Basilio Name */
+.hero-top-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .hero-logo {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 
 .hero-party-name {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #ffd700; /* optional gold for party name */
+  color: #ffd700;
 }
 
-
-.hero-overlay {
-  background-color: rgba(0, 64, 128, 0.6); /* semi-transparent overlay */
-  padding: 40px 20px;
-  text-align: center;
-  color: #fff;
-  width: 100%;
+.hero-name {
+  font-size: 2rem;
+  margin: 0;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+/* Subtitle */
+.hero-subtitle {
+  margin-top: 10px;
+  font-size: 1.2rem;
 }
 
-.hero p {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
+/* Buttons */
 .buttons {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.buttons .btn {
+  background-color: #004080;
+  color: #fff;
+  padding: 8px 15px;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.buttons .btn:hover {
+  background-color: #002f5c;
 }
 
 .btn {
