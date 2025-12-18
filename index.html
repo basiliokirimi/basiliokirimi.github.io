@@ -29,6 +29,20 @@
     </div>
   </section>
 
+  <!-- Image Carousel -->
+  <section class="carousel-section">
+    <h2>Campaign Highlights</h2>
+    <div class="carousel">
+      <img class="carousel-slide" src="image1.jpg" alt="Campaign Rally 1">
+      <img class="carousel-slide" src="image2.jpg" alt="Community Meeting">
+      <img class="carousel-slide" src="image3.jpg" alt="Basilio Speaking">
+    </div>
+    <div class="carousel-controls">
+      <button id="prevBtn">&#10094;</button>
+      <button id="nextBtn">&#10095;</button>
+    </div>
+  </section>
+
   <!-- About Basilio -->
   <section>
     <h2>About Basilio</h2>
@@ -68,6 +82,38 @@
   <footer>
     <p>&copy; 2025 Basilio Kirimi Campaign | South Imenti, Meru County, Kenya</p>
   </footer>
+
+  <!-- Carousel Script -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const totalSlides = slides.length;
+
+    const showSlide = (index) => {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+      });
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
+      showSlide(currentSlide);
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentSlide = (currentSlide === totalSlides - 1) ? 0 : currentSlide + 1;
+      showSlide(currentSlide);
+    });
+
+    // Auto-slide every 5 seconds
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }, 5000);
+
+    // Initialize
+    showSlide(currentSlide);
+  </script>
 
 </body>
 </html>
