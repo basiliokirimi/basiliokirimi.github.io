@@ -13,53 +13,63 @@ h1, h2 {
 }
 
 /* Hero Section */
-/* Hero Section */
 .hero {
   position: relative;
-  height: 50vh; /* shorter hero to reduce clutter */
+  height: 50vh; /* shorter hero */
   background: url('hero-bg.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* left align content */
+  justify-content: flex-start;
   padding: 0 40px;
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.5); /* dark overlay for text */
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
   padding: 20px;
   border-radius: 10px;
   color: #fff;
+  max-width: 1000px;
 }
 
-/* Hero Top Row: Broom + Party Name + Basilio Name */
+/* Top row: broom+party on left, Basilio name next to it */
 .hero-top-row {
   display: flex;
   align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
+/* Left part: broom + party */
+.hero-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Broom logo */
 .hero-logo {
   width: 50px;
   height: 50px;
 }
 
+/* Party name */
 .hero-party-name {
   font-size: 1.2rem;
   font-weight: bold;
   color: #ffd700;
 }
 
+/* Basilio name */
 .hero-name {
   font-size: 2rem;
   margin: 0;
 }
 
-/* Subtitle */
+/* Subtitle below row */
 .hero-subtitle {
   margin-top: 10px;
   font-size: 1.2rem;
 }
+
 
 /* Buttons */
 .buttons {
