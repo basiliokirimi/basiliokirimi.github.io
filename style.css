@@ -4,7 +4,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Hero Header */
+/* Hero Header - default: relative for mobile */
 .hero {
   width: 100%;
   background-color: #fff; /* WHITE background */
@@ -13,10 +13,17 @@ body {
   align-items: center;      /* center subtitle and buttons */
   padding: 20px 40px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: fixed;          /* pinned to top */
-  top: 0;
-  left: 0;
+  position: relative;       /* relative by default for mobile */
   z-index: 100;
+}
+
+/* Fixed header on larger screens only */
+@media (min-width: 601px) {
+  .hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 }
 
 /* Top row: broom + party + Basilio */
@@ -70,7 +77,7 @@ body {
     gap: 10px;
     background-color: #004080;
     position: absolute;
-    top: 50px;
+    top: 60px;       /* just below header */
     right: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -87,15 +94,14 @@ body {
     font-size: 2rem;
     cursor: pointer;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
   }
 
   .buttons-container {
-    position: relative; /* for the absolute menu */
+    position: relative; /* for absolute menu */
   }
 }
-
 
 /* Carousel */
 .carousel-section {
@@ -165,22 +171,22 @@ footer {
 @media (max-width: 600px) {
   .hero-top-row {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* center top row content on mobile */
   }
+
   .hero-name {
     margin-left: 0;
   }
+
   .hero h1 {
     font-size: 2rem;
   }
+
   .hero p {
     font-size: 1rem;
   }
-  .buttons {
-    flex-direction: column;
-    align-items: center;
-  }
+
   .carousel {
-    height: 280px;
+    height: 350px;
   }
 }
