@@ -1,29 +1,36 @@
-/* ===== RESET ===== */
+/* RESET */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
   color: #333;
 }
 
-/* ===== HEADER ===== */
+/* SHARED CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HERO HEADER */
 .hero {
   width: 100%;
-  background: #fff;
+  background-color: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .hero-overlay {
-  max-width: 1200px;
-  margin: auto;
-  padding: 15px 20px 20px;
+  padding: 30px 0;
 }
 
-/* Top row */
+/* TOP ROW */
 .hero-top-row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .hero-left {
@@ -33,29 +40,29 @@ body {
 }
 
 .hero-logo {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
 }
 
-.hero-party {
+.hero-party-name {
+  font-size: 1.3rem;
   font-weight: bold;
-  font-size: 1.1rem;
   color: #004080;
 }
 
 .hero-name {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin: 0;
 }
 
-/* Subtitle */
+/* SUBTITLE */
 .hero-subtitle {
   text-align: center;
-  margin: 8px 0 12px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  margin: 10px 0;
 }
 
-/* Buttons */
+/* BUTTONS */
 .buttons {
   display: flex;
   justify-content: center;
@@ -63,24 +70,27 @@ body {
 }
 
 .btn {
-  background: #004080;
+  background-color: #004080;
   color: #fff;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* ===== CAROUSEL ===== */
+.btn:hover {
+  background-color: #002f5c;
+}
+
+/* CAROUSEL */
 .carousel-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
+  margin: 40px 0;
   text-align: center;
 }
 
 .carousel {
   position: relative;
+  width: 100%;
   height: 400px;
   overflow: hidden;
   border-radius: 10px;
@@ -93,51 +103,47 @@ body {
   object-fit: cover;
 }
 
-/* Controls */
 .carousel-controls {
   margin-top: 10px;
 }
 
 .carousel-controls button {
-  background: #004080;
+  background-color: #004080;
   color: #fff;
   border: none;
-  padding: 8px 14px;
+  padding: 8px 15px;
   font-size: 18px;
-  border-radius: 5px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
-/* ===== CONTENT ===== */
+/* SECTIONS */
 section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
+  margin: 40px 0;
 }
 
 .slogan {
+  font-size: 1.4rem;
   font-weight: bold;
-  font-size: 1.3rem;
   color: #d90000;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
-  background: #004080;
+  background-color: #004080;
   color: #fff;
   text-align: center;
   padding: 20px;
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
+/* RESPONSIVE */
+@media (max-width: 600px) {
   .hero-top-row {
     flex-direction: column;
-    text-align: center;
   }
 
   .hero-name {
-    font-size: 1.7rem;
+    text-align: center;
   }
 
   .carousel {
