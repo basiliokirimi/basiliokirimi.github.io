@@ -1,87 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Basilio Kirimi - South Imenti MP Candidate</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basilio Kirimi - South Imenti MP Candidate</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Hero Header -->
+<!-- ===== HEADER / HERO ===== -->
 <header class="hero">
   <div class="hero-overlay">
-    <!-- Top row: broom + party name + Basilio -->
+
+    <!-- TOP ROW -->
     <div class="hero-top-row">
-      <img src="broom.png" alt="Kenya Social Congress Party Symbol" class="hero-logo">
-      <span class="hero-party-name">Kenya Social Congress</span>
+      <div class="hero-left">
+        <img src="broom.png" alt="Kenya Social Congress Party Symbol" class="hero-logo">
+        <span class="hero-party">Kenya Social Congress</span>
+      </div>
+
       <h1 class="hero-name">Basilio Kirimi</h1>
     </div>
 
-    <!-- Subtitle -->
+    <!-- SUBTITLE -->
     <p class="hero-subtitle">South Imenti MP Candidate</p>
 
-    <!-- Buttons container -->
-    <div class="buttons-container">
-      <div class="hamburger">&#9776;</div>
-      <div class="buttons">
-        <a href="#support" class="btn">Support</a>
-        <a href="#contact" class="btn">Contact</a>
-        <a href="#volunteer" class="btn">Volunteer</a>
-      </div>
+    <!-- BUTTONS -->
+    <div class="buttons">
+      <a href="#support" class="btn">Support</a>
+      <a href="#contact" class="btn">Contact</a>
+      <a href="#volunteer" class="btn">Volunteer</a>
     </div>
+
   </div>
 </header>
 
-<!-- Carousel -->
+<!-- ===== IMAGE CAROUSEL ===== -->
 <section class="carousel-section">
   <h2>Campaign Highlights</h2>
+
   <div class="carousel">
-    <img class="carousel-slide" src="holidays.jpeg" alt="Campaign Rally 1">
+    <img class="carousel-slide" src="holidays.jpeg" alt="Campaign Rally">
     <img class="carousel-slide" src="iebc.jpeg" alt="Community Meeting">
-    <img class="carousel-slide" src="party.jpeg" alt="Basilio Speaking">
+    <img class="carousel-slide" src="party.jpeg" alt="Party Event">
   </div>
+
   <div class="carousel-controls">
     <button id="prevBtn">&#10094;</button>
     <button id="nextBtn">&#10095;</button>
   </div>
 </section>
 
-<!-- Other page content here -->
+<!-- ===== ABOUT ===== -->
+<section>
+  <h2>About Basilio</h2>
+  <p>
+    Basilio Kirimi is a young, vibrant, and articulate leader vying for the seat
+    of South Imenti Member of Parliament in Meru County. He previously contested
+    for the Senate seat of Meru County.
+  </p>
 
-<!-- JavaScript -->
+  <h2>Vision & Beliefs</h2>
+  <p>
+    Basilio believes the incumbent MP has lost touch with the common
+    <em>mwananchi</em>. He supports Hon. Dr. Fred Matiang’i as a strong presidential
+    candidate in 2027.
+  </p>
+
+  <h2>Campaign Slogan</h2>
+  <p class="slogan">"One Term"</p>
+
+  <h2>Why Vote for Basilio?</h2>
+  <ul>
+    <li>Articulate and knowledgeable in politics</li>
+    <li>Understands the struggles of South Imenti</li>
+    <li>Represents youth and accountability</li>
+  </ul>
+</section>
+
+<!-- ===== CALL TO ACTION ===== -->
+<section id="support">
+  <h2>Support Basilio</h2>
+  <p>Together, we can transform South Imenti.</p>
+</section>
+
+<section id="volunteer">
+  <h2>Volunteer</h2>
+  <p>Join the movement and make a difference.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Reach the campaign team via email or social media.</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Basilio Kirimi Campaign | South Imenti, Meru County</p>
+</footer>
+
+<!-- ===== CAROUSEL SCRIPT ===== -->
 <script>
-  // Hamburger toggle
-  const hamburger = document.querySelector('.hamburger');
-  const buttons = document.querySelector('.buttons');
-
-  hamburger.addEventListener('click', () => {
-    buttons.classList.toggle('show');
-  });
-
-  // Carousel
   let currentSlide = 0;
   const slides = document.querySelectorAll('.carousel-slide');
-  const totalSlides = slides.length;
 
-  const showSlide = (index) => {
+  function showSlide(index) {
     slides.forEach((slide, i) => {
       slide.style.display = i === index ? 'block' : 'none';
     });
+  }
+
+  document.getElementById('prevBtn').onclick = () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
   };
 
-  document.getElementById('prevBtn').addEventListener('click', () => {
-    currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
+  document.getElementById('nextBtn').onclick = () => {
+    currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
-  });
-
-  document.getElementById('nextBtn').addEventListener('click', () => {
-    currentSlide = (currentSlide === totalSlides - 1) ? 0 : currentSlide + 1;
-    showSlide(currentSlide);
-  });
+  };
 
   setInterval(() => {
-    currentSlide = (currentSlide + 1) % totalSlides;
+    currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
   }, 5000);
 
