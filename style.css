@@ -72,6 +72,46 @@ body {
   background-color: #002f5c;
 }
 
+/* Buttons container for desktop */
+.buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Hide hamburger on large screens */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Responsive for small devices */
+@media (max-width: 600px) {
+  .buttons {
+    display: none; /* hide normal buttons */
+    flex-direction: column;
+    gap: 10px;
+    background-color: #004080;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .buttons.show {
+    display: flex; /* show buttons when toggled */
+  }
+
+  .hamburger {
+    display: block; /* show hamburger on small screens */
+  }
+}
 
 
 /* Carousel */
