@@ -18,23 +18,24 @@ h1, h2 {
   height: 80vh; /* tall hero */
   background: url('hero-bg.jpg') center/cover no-repeat;
   display: flex;
-  flex-direction: column; /* stack overlay content from top */
-  justify-content: flex-start; /* align to top, not center */
-  padding-top: 20px; /* small padding from top if needed */
+  flex-direction: column; /* stack overlay content */
+  justify-content: flex-start; /* content starts at top */
+  padding: 20px 40px; /* small padding inside */
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.5);
   padding: 30px;
   border-radius: 10px;
   color: #fff;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   display: flex;
-  flex-direction: column; /* stack top row, subtitle, buttons */
+  flex-direction: column;
   gap: 15px;
-  text-align: left; /* keep text left-aligned */
+  text-align: left;
 }
+
 
 /* Top row: broom + party + Basilio name */
 .hero-top-row {
