@@ -15,70 +15,70 @@ h1, h2 {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 50vh; /* shorter hero */
+  height: 75vh; /* taller hero */
   background: url('hero-bg.jpg') center/cover no-repeat;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center */
   padding: 0 40px;
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.5); /* dark overlay */
-  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  padding: 30px;
   border-radius: 10px;
   color: #fff;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1200px;
 }
 
-/* Top row: broom+party on left, Basilio name next to it */
+/* Top row: broom + party on left, Basilio name */
 .hero-top-row {
   display: flex;
   align-items: center;
+  justify-content: flex-start; /* keep left-aligned in overlay */
   gap: 20px;
+  flex-wrap: wrap;
 }
 
-/* Left part: broom + party */
+/* Left: broom + party name */
 .hero-left {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Broom logo */
 .hero-logo {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 
-/* Party name */
 .hero-party-name {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #ffd700;
 }
 
-/* Basilio name */
 .hero-name {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 0;
 }
 
-/* Subtitle below row */
+/* Subtitle below top row */
 .hero-subtitle {
-  margin-top: 10px;
-  font-size: 1.2rem;
+  margin-top: 15px;
+  font-size: 1.5rem;
 }
 
 /* Buttons below subtitle */
 .buttons {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .buttons .btn {
   background-color: #004080;
   color: #fff;
-  padding: 8px 15px;
+  padding: 10px 20px;
   margin-right: 10px;
   text-decoration: none;
   border-radius: 5px;
@@ -88,7 +88,6 @@ h1, h2 {
 .buttons .btn:hover {
   background-color: #002f5c;
 }
-
 
 /* Party Section */
 .party-section {
