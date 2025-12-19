@@ -70,8 +70,7 @@ h1, h2 {
   font-size: 1.2rem;
 }
 
-
-/* Buttons */
+/* Buttons below subtitle */
 .buttons {
   margin-top: 15px;
 }
@@ -90,19 +89,6 @@ h1, h2 {
   background-color: #002f5c;
 }
 
-.btn {
-  background-color: #d90000; /* Accent color for buttons */
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 25px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #a30000;
-}
 
 /* Party Section */
 .party-section {
