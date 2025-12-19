@@ -1,55 +1,49 @@
-/* Base Styles */
-body {
-  font-family: Arial, sans-serif;
+/* Reset default margin/padding */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #f9f9f9;
 }
 
-h1, h2 {
-  color: #004080; /* Party primary color */
-}
-
+/* Hero Section */
 .hero {
   position: relative;
   width: 100%;
-  height: 80vh; /* tall hero */
+  height: 80vh;
   background: url('hero-bg.jpg') center/cover no-repeat;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* align content to top */
+  justify-content: center;  /* center overlay horizontally */
+  align-items: flex-start;  /* pin to top */
+  padding-top: 20px;        /* small space from top of viewport */
 }
 
 .hero-overlay {
   background: rgba(0,0,0,0.5);
-  padding: 20px; /* reduce top padding */
+  padding: 20px 30px;
   border-radius: 10px;
-  color: #fff;
-  width: 100%;   /* full width */
+  width: 90%;
   max-width: 1200px;
   display: flex;
   flex-direction: column;
+  align-items: center;       /* center top row, subtitle, buttons */
   gap: 15px;
-  text-align: left;
+  text-align: center;
 }
-
-
 
 /* Top row: broom + party + Basilio name */
 .hero-top-row {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-}
-
-/* Left part: broom + party */
-.hero-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .hero-logo {
@@ -65,18 +59,19 @@ h1, h2 {
 
 .hero-name {
   font-size: 2.5rem;
-  margin: 0;
 }
 
 /* Subtitle below top row */
 .hero-subtitle {
   font-size: 1.5rem;
+  margin-top: 10px;
 }
 
 /* Buttons below subtitle */
 .buttons {
   display: flex;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .buttons .btn {
@@ -91,7 +86,6 @@ h1, h2 {
 .buttons .btn:hover {
   background-color: #002f5c;
 }
-
 
 /* Party Section */
 .party-section {
@@ -110,8 +104,7 @@ h1, h2 {
   height: 60px;
 }
 
-/* Carousel Styles */
-/* Carousel Styles - Fixed height and consistent images */
+/* Carousel Section */
 .carousel-section {
   max-width: 900px;
   margin: 40px auto;
@@ -122,20 +115,19 @@ h1, h2 {
 .carousel {
   position: relative;
   width: 100%;
-  height: 400px;           /* Fixed height for all slides */
+  height: 400px;
   overflow: hidden;
   border-radius: 10px;
 }
 
 .carousel-slide {
   width: 100%;
-  height: 100%;            /* Fill the container */
+  height: 100%;
   display: none;
-  object-fit: cover;       /* Crop or scale image to fit without stretching */
+  object-fit: cover;
   border-radius: 10px;
 }
 
-/* Carousel Buttons */
 .carousel-controls {
   margin-top: 10px;
 }
@@ -155,15 +147,7 @@ h1, h2 {
   background-color: #002f5c;
 }
 
-/* Optional: make carousel responsive */
-@media (max-width: 600px) {
-  .carousel {
-    height: 250px;          /* smaller height on mobile */
-  }
-}
-
-
-/* Section Styles */
+/* Sections */
 section {
   max-width: 900px;
   margin: 40px auto;
@@ -189,14 +173,14 @@ footer {
   .hero h1 {
     font-size: 2rem;
   }
-  .hero p {
-    font-size: 1rem;
+  .hero-subtitle {
+    font-size: 1.2rem;
   }
-  .party img {
+  .hero-logo {
     width: 50px;
     height: 50px;
   }
-  .btn {
-    padding: 8px 20px;
+  .buttons .btn {
+    padding: 8px 15px;
   }
 }
