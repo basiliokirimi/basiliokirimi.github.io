@@ -12,15 +12,14 @@ h1, h2 {
   color: #004080; /* Party primary color */
 }
 
-/* Hero Section */
 .hero {
   position: relative;
   width: 100%;
-  height: 75vh; /* prominent height */
+  height: 80vh; /* make hero taller */
   background: url('hero-bg.jpg') center/cover no-repeat;
   display: flex;
-  align-items: center;      /* vertical centering of overlay */
-  justify-content: center;  /* center horizontally */
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
 }
 
 .hero-overlay {
@@ -31,19 +30,20 @@ h1, h2 {
   width: 90%;
   max-width: 1200px;
   display: flex;
-  flex-direction: column; /* stack subtitle and buttons below top row */
-  align-items: flex-start; /* top row stays left-aligned */
+  flex-direction: column; /* stack subtitle and buttons */
+  align-items: center;    /* center everything inside horizontally */
+  text-align: center;     /* text centered */
 }
 
-/* Top row: broom + party left, Basilio name right in same row */
+/* Top row: broom + party name on left, Basilio name next to it */
 .hero-top-row {
   display: flex;
   align-items: center;
+  justify-content: center; /* center the row inside overlay */
   gap: 20px;
   flex-wrap: wrap;
 }
 
-/* Left side: broom + party name */
 .hero-left {
   display: flex;
   align-items: center;
@@ -61,20 +61,18 @@ h1, h2 {
   color: #ffd700;
 }
 
-/* Basilio name in top row */
 .hero-name {
   font-size: 2.5rem;
   margin: 0;
 }
 
-/* Subtitle stacked below top row */
+/* Subtitle below top row */
 .hero-subtitle {
   margin-top: 20px;
   font-size: 1.5rem;
-  text-align: left;
 }
 
-/* Buttons stacked below subtitle */
+/* Buttons below subtitle */
 .buttons {
   margin-top: 20px;
   display: flex;
@@ -93,6 +91,7 @@ h1, h2 {
 .buttons .btn:hover {
   background-color: #002f5c;
 }
+
 
 /* Party Section */
 .party-section {
