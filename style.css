@@ -3,28 +3,28 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
-  color: #333;
+  color: #2c2c2c; /* richer body text */
 }
 
-/* SHARED CONTAINER */
+/* CONTAINER */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* HERO HEADER */
+/* HERO */
 .hero {
   width: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .hero-overlay {
-  padding: 30px 0;
+  padding: 25px 0;
 }
 
-/* TOP ROW */
+/* HERO TOP ROW */
 .hero-top-row {
   display: flex;
   align-items: center;
@@ -53,13 +53,15 @@ body {
 .hero-name {
   font-size: 2.2rem;
   margin: 0;
+  color: #111;
 }
 
-/* SUBTITLE */
+/* HERO SUBTITLE */
 .hero-subtitle {
   text-align: center;
   font-size: 1.3rem;
   margin: 10px 0;
+  color: #444;
 }
 
 /* BUTTONS */
@@ -82,9 +84,22 @@ body {
   background-color: #002f5c;
 }
 
+/* SECTION TITLES */
+.section-title {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* FIX GAP AFTER HEADER (MOBILE + DESKTOP) */
+.first-section {
+  margin-top: 30px;
+}
+
 /* CAROUSEL */
 .carousel-section {
-  margin: 40px 0;
+  margin: 30px 0;
   text-align: center;
 }
 
@@ -103,6 +118,7 @@ body {
   object-fit: cover;
 }
 
+/* CAROUSEL CONTROLS */
 .carousel-controls {
   margin-top: 10px;
 }
@@ -122,10 +138,12 @@ section {
   margin: 40px 0;
 }
 
+/* SLOGAN */
 .slogan {
+  text-align: center;
   font-size: 1.4rem;
   font-weight: bold;
-  color: #d90000;
+  color: #c00000;
 }
 
 /* FOOTER */
@@ -142,11 +160,15 @@ footer {
     flex-direction: column;
   }
 
-  .hero-name {
-    text-align: center;
+  .carousel {
+    height: 260px;
   }
 
-  .carousel {
-    height: 280px;
+  section {
+    margin: 25px 0;
+  }
+
+  .first-section {
+    margin-top: 15px; /* FIX big phone gap */
   }
 }
