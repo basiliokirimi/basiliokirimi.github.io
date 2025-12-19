@@ -8,111 +8,109 @@
 </head>
 <body>
 
-<header class="hero">
-  <div class="hero-overlay">
-    <!-- Top row: broom + party name + Basilio name -->
-    <div class="hero-top-row">
-      <img src="broom.png" alt="Kenya Social Congress Party Symbol" class="hero-logo">
-      <span class="hero-party-name">Kenya Social Congress</span>
-      <h1 class="hero-name">Basilio Kirimi</h1>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay">
+      <!-- Top row: broom + party + Basilio -->
+      <div class="hero-top-row">
+        <img src="broom.png" alt="Kenya Social Congress Party Symbol" class="hero-logo">
+        <span class="hero-party-name">Kenya Social Congress</span>
+        <h1 class="hero-name">Basilio Kirimi</h1>
+      </div>
+
+      <!-- Subtitle -->
+      <p class="hero-subtitle">South Imenti MP Candidate</p>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <a href="#support" class="btn">Support</a>
+        <a href="#contact" class="btn">Contact</a>
+        <a href="#volunteer" class="btn">Volunteer</a>
+      </div>
     </div>
+  </header>
 
-    <!-- Subtitle below top row -->
-    <p class="hero-subtitle">South Imenti MP Candidate</p>
-
-    <!-- Buttons below subtitle, centered -->
-    <div class="buttons">
-      <a href="#support" class="btn">Support</a>
-      <a href="#contact" class="btn">Contact</a>
-      <a href="#volunteer" class="btn">Volunteer</a>
+  <!-- Image Carousel -->
+  <section class="carousel-section">
+    <h2>Campaign Highlights</h2>
+    <div class="carousel">
+      <img class="carousel-slide" src="holidays.jpeg" alt="Campaign Rally 1">
+      <img class="carousel-slide" src="iebc.jpeg" alt="Community Meeting">
+      <img class="carousel-slide" src="party.jpeg" alt="Basilio Speaking">
     </div>
-  </div>
-</header>
+    <div class="carousel-controls">
+      <button id="prevBtn">&#10094;</button>
+      <button id="nextBtn">&#10095;</button>
+    </div>
+  </section>
 
+  <!-- About Basilio -->
+  <section>
+    <h2>About Basilio</h2>
+    <p>Basilio Kirimi is a young, vibrant, and articulate leader vying for the seat of South Imenti Member of Parliament in Meru County. He previously demonstrated his courage and commitment to the people by contesting for the Senate seat of Meru County.</p>
 
-<!-- Image Carousel -->
-<section class="carousel-section">
-  <h2>Campaign Highlights</h2>
-  <div class="carousel">
-    <img class="carousel-slide" src="holidays.jpeg" alt="Campaign Rally 1">
-    <img class="carousel-slide" src="iebc.jpeg" alt="Community Meeting">
-    <img class="carousel-slide" src="party.jpeg" alt="Basilio Speaking">
-  </div>
-  <div class="carousel-controls">
-    <button id="prevBtn">&#10094;</button>
-    <button id="nextBtn">&#10095;</button>
-  </div>
-</section>
+    <h2>Vision & Beliefs</h2>
+    <p>Basilio believes the current MP has lost touch with the common <em>mwananchi</em> and has done little for South Imenti. He is committed to being a voice for the people and ensuring that government policies are aligned with the needs of the citizens. He strongly supports Hon. Dr. Fred Matiang'i as a potential president in 2027.</p>
 
-<!-- About Basilio -->
-<section>
-  <h2>About Basilio</h2>
-  <p>Basilio Kirimi is a young, vibrant, and articulate leader vying for the seat of South Imenti Member of Parliament in Meru County. He previously demonstrated his courage and commitment to the people by contesting for the Senate seat of Meru County.</p>
+    <h2>Campaign Slogan</h2>
+    <p class="slogan">"One Term" – for the incumbent MP and the government of Kenya.</p>
 
-  <h2>Vision & Beliefs</h2>
-  <p>Basilio believes the current MP has lost touch with the common <em>mwananchi</em> and has done little for South Imenti. He is committed to being a voice for the people and ensuring that government policies are aligned with the needs of the citizens. He strongly supports Hon. Dr. Fred Matiang'i as a potential president in 2027.</p>
+    <h2>Why Vote for Basilio?</h2>
+    <ul>
+      <li>Well-articulated and knowledgeable on national and local politics.</li>
+      <li>Deep understanding of the plights and aspirations of South Imenti residents.</li>
+      <li>Committed to accountability, transparency, and progress for the people.</li>
+      <li>Represents youth, energy, and a new vision for leadership.</li>
+    </ul>
+  </section>
 
-  <h2>Campaign Slogan</h2>
-  <p class="slogan">"One Term" – for the incumbent MP and the government of Kenya.</p>
+  <!-- Call-to-Action Sections -->
+  <section id="support">
+    <h2>Support Basilio</h2>
+    <p>Show your support for Basilio Kirimi’s campaign. Together, we can make a change in South Imenti!</p>
+  </section>
 
-  <h2>Why Vote for Basilio?</h2>
-  <ul>
-    <li>Well-articulated and knowledgeable on national and local politics.</li>
-    <li>Deep understanding of the plights and aspirations of South Imenti residents.</li>
-    <li>Committed to accountability, transparency, and progress for the people.</li>
-    <li>Represents youth, energy, and a new vision for leadership.</li>
-  </ul>
-</section>
+  <section id="volunteer">
+    <h2>Volunteer</h2>
+    <p>Join the campaign team and help spread the message. Your efforts can make a real difference!</p>
+  </section>
 
-<!-- Call-to-Action Sections -->
-<section id="support">
-  <h2>Support Basilio</h2>
-  <p>Show your support for Basilio Kirimi’s campaign. Together, we can make a change in South Imenti!</p>
-</section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Reach out to the campaign team via email or social media for inquiries or suggestions.</p>
+  </section>
 
-<section id="volunteer">
-  <h2>Volunteer</h2>
-  <p>Join the campaign team and help spread the message. Your efforts can make a real difference!</p>
-</section>
+  <footer>
+    <p>&copy; 2025 Basilio Kirimi Campaign | South Imenti, Meru County, Kenya</p>
+  </footer>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Reach out to the campaign team via email or social media for inquiries or suggestions.</p>
-</section>
+  <!-- Carousel Script -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const totalSlides = slides.length;
 
-<footer>
-  <p>&copy; 2025 Basilio Kirimi Campaign | South Imenti, Meru County, Kenya</p>
-</footer>
+    const showSlide = (index) => {
+      slides.forEach((slide, i) => slide.style.display = i === index ? 'block' : 'none');
+    };
 
-<!-- Carousel Script -->
-<script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.carousel-slide');
-  const totalSlides = slides.length;
-
-  const showSlide = (index) => {
-    slides.forEach((slide, i) => {
-      slide.style.display = i === index ? 'block' : 'none';
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
+      showSlide(currentSlide);
     });
-  }
 
-  document.getElementById('prevBtn').addEventListener('click', () => {
-    currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentSlide = (currentSlide === totalSlides - 1) ? 0 : currentSlide + 1;
+      showSlide(currentSlide);
+    });
+
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }, 5000);
+
     showSlide(currentSlide);
-  });
-
-  document.getElementById('nextBtn').addEventListener('click', () => {
-    currentSlide = (currentSlide === totalSlides - 1) ? 0 : currentSlide + 1;
-    showSlide(currentSlide);
-  });
-
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
-  }, 5000);
-
-  showSlide(currentSlide);
-</script>
+  </script>
 
 </body>
 </html>
